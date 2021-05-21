@@ -19,8 +19,6 @@ class Controller:
         for _, layer in self.json_.items():
 
             links_list = layer.get("links_list")
-            level_weights = layer.get("level_weights")
-            self.checker.check_matrix(level_weights)
 
             if links_list is None:
                 raise MyException

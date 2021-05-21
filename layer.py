@@ -11,7 +11,6 @@ class Layer:
                 self.weights.append(self.set_weights())
             else:
                 self.weights.append(weights)
-        self.level_weights = json.get("level_weights")
 
     def set_weights(self):
         return 0
@@ -23,5 +22,4 @@ class Layer:
                 f"links={self.links[i]}\n" \
                 f"weights={self.weights[i]}\n\n"
             l.append(s)
-        l.append(f"level_weights={self.level_weights}")
         return ''.join(l)
